@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa - Muhammad Lintang Fajar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Reset dan Box Sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* --- Styling Body (Polos) --- */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f8f8f8; /* Latar belakang body polos putih/abu-abu terang */
+            color: #333333; /* Teks default di body menjadi gelap */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* body::before yang menciptakan efek blur di body TELAH DIHAPUS */
+
+        /* --- Header dan Navigasi dengan Efek Blur (Glass-Morphism) --- */
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+            /* Header transparan agar efek blur terlihat di atas background #f8f8f8 */
+            background: rgba(255, 255, 255, 0.5); 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Tambahkan shadow agar terangkat */
+            position: fixed;
+            top: 0;
+            z-index: 10;
+        }
+
+        .nav_links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px 20px;
+            width: fit-content;
+            /* Efek Blur Glass Morphism pada Navigasi */
+            background: rgba(255, 255, 255, 0.3); /* Transparan lebih terang */
+            border-radius: 50px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.6); 
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .nav_links li a {
+            color: #8B4513; /* Warna Coklat Gelap/Tembaga agar kontras di latar belakang terang */
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav_links li a:hover {
+            color: #000000; /* Warna Hitam saat hover */
+        }
+
+        /* --- Styling Card Profil --- */
+        
+        .card {
+            margin-top: 100px; /* Jarak dari header fixed */
+            margin-bottom: 20px; 
+            width: 450px;
+            /* Latar belakang card putih solid */
+            background-color: #ffffff; 
+            border-radius: 10px;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0px 0px 8px rgba(0,0,0,0.2);
+            color: #333;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin: 20px 0 5px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="nav">
+            <ul class="nav_links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="ticket.html">Ticket</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="card">
+        <img src="foto.jpg" alt="Foto Profil" class="profile-img">
+
+        <h2>Muhammad Lintang Fajar</h2>
+        <p>1462300024</p>
+        <p>
+            Hii Saya mahasiswa dari universitas 17 Agustus 1945 Surabaya.
+        </p>
+    </div>
+</body>
+</html>
